@@ -6,6 +6,12 @@
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 676px) {
+  .user_container  {
+      width: 300px;
+  }
+}
+
 .search-box {
   outline: none;
   width: 100%;

@@ -37,7 +37,7 @@ const Users = ({userData}) => {
                 <a className="user__title" onClick={() => setImageOpen(true)}><img src={userData.picture.thumbnail}/></a>
                 <Modal isOpen={imageOpen}>
                     <div>
-                    <img src={userData.picture.thumbnail} style={{width: '500px'}}/>
+                    <img className='zoomImage' src={userData.picture.thumbnail} />
                     </div>
                     <div>
                         <button onClick={() => setImageOpen(false)} >Close</button>
