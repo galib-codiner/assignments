@@ -1,27 +1,50 @@
 .user {
-    margin: 2rem 2rem 2rem 0;
-    padding: 1.5rem;
-    width: 300px;
-    box-shadow: 0 0 28px 4px rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 10px;
+    width: 320px;
     cursor: pointer;
     display: flex;
+    background-color: #120e0eeb;
 }
 
 
 .user__title {
     font-weight: 800;
     font-size: 30px;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.other-details  p {
+    color: #fff;
+}
+
+.other-details span {
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 18px;
+}
+.phone {
+    margin-bottom: 20px;
+    color: #fff;
+}
+.phone span {
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 18px;
 }
 
 .zoomImage {
     width: 40%;
 }
 
-@media screen and (max-width: 676px) {
+
+
+  @media only screen and (max-width: 600px) {
     .zoomImage {
         width: 100%;
     }
     .user {
-        width: 500px !important;
+        min-width: 480px !important;
     }
   }

@@ -1,6 +1,11 @@
 .App {
   padding: 4rem;
 }
+.App h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #000650f5;
+}
 .user_container {
   display: flex;
   flex-wrap: wrap;
@@ -15,8 +20,9 @@
 .search-box {
   outline: none;
   width: 100%;
-  border: 1px solid grey;
+  border: 0px;
   font-size: 1rem;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0px;
+  box-shadow: 0px 0px 8px #000650f5;
 }
