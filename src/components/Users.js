@@ -2,11 +2,28 @@ import React, {useState, useEffect} from 'react';
 import Address from './Address';
 import Modal from 'react-modal'
 import './User.css';
+// const moment = require("moment");
 
+// 24 Hour format
+// console.log(moment().format("MM/DD/YYYY"));
+
+import * as moment from 'moment'
+
+const yourDate = new Date()
+const NewDate = moment(yourDate, 'DD-MM-YYYY')
+
+// const now = new Date();
+// const dateString = now.toLocaleDateString({
+//   weekday: "short",
+//   year: "numeric",
+//   month: "2-digit",
+//   day: "numeric"
+// })
 
 const Users = ({userData}) => {
-    const [modalOpen, setMOdalOpen] = useState(false)
-    const [imageOpen, setImageOpen] = useState(false)
+    const [modalOpen, setMOdalOpen] = useState(false);
+    const [imageOpen, setImageOpen] = useState(false);
+
 
     return (
         <div className="user">
@@ -29,8 +46,8 @@ const Users = ({userData}) => {
                 
                 <div className='other-details'>
                     <p><span>Username : </span> {userData.login.username}</p>
-                    <p><span>Email : </span> {userData.email}</p>
-                    <p><span>DOB : </span> {userData.dob.date}</p>
+                    <p><span>Email : </span> {userData.email}  </p>
+                    <p><span>DOB : </span> { (new Date(userData.dob.date)).toLocaleDateString() } </p>
                 </div>
                 
                 <Address location={userData.location} />
