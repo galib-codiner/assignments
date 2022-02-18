@@ -1,27 +1,40 @@
-.App {
+/* .App {
   padding: 4rem;
-}
+} */
 .App h1 {
   text-transform: uppercase;
   font-weight: 800;
   color: #000650f5;
+  padding-left: 40px !important;
 }
-.user_container {
+/* .user_container {
   display: flex;
   flex-wrap: wrap;
+} */
+
+.user_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 20px;
+  padding-left: 20px !important;
 }
 
 @media screen and (max-width: 676px) {
   .user_container  {
-      width: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .search-box {
+    outline: none;
+    width: 80% !important;
   }
 }
 
 .search-box {
   outline: none;
-  width: 100%;
+  width: 90%;
   border: 0px;
   font-size: 1rem;
+  margin-left: 30px;
   padding: 1rem;
   border-radius: 0px;
   box-shadow: 0px 0px 8px #000650f5;
