@@ -6,10 +6,10 @@ const Address = ({location}) => {
         <div className="address">
             <h4>Address :- </h4>
                 <pre>
-                <p> <span> Street  </span>{location.street.number} {location.street.name} </p>
-                <p> <span> City  </span>{location.city}  </p>
-                <p> <span> Country  </span>{location.country}  </p>
-                <p> <span> Postcode  </span>{location.postcode}  </p>
+                <p> <span className='spanone'> Street  </span> : <span className='spantwo'>{location.street.number} {location.street.name}</span> </p>
+                <p> <span className='spanone'> City  </span> : <span className='spantwo'>{location.city}</span>   </p>
+                <p> <span className='spanone'> Country  </span> : <span className='spantwo'>{location.country}</span>   </p>
+                <p> <span className='spanone'> Postcode  </span> : <span className='spantwo'>{location.postcode}</span>   </p>
             </pre>
         </div>
     )

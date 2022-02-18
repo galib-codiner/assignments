@@ -7,11 +7,19 @@
     color: #fff;
 }
 
-.address span {
+.address .spanone {
     color: aliceblue;
     font-weight: 900;
     font-size: 15px;
+    float: left;
+    width: 80px;
 }
-.address span::after {
+
+/* .address .spantwo {
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 15px;
+} */
+/* .address .spanone::after {
     content: " : ";
-  }
+  } */
