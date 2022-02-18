@@ -7,7 +7,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [text, setText] = useState();
 
-
   useEffect(() => {
     (async () => {
       let userData;
@@ -22,8 +21,6 @@ function App() {
       setUsers(userData.results);
     })();
   }, []);
-
-
 
   const filterCards = event => {
     const value = event.target.value.toLowerCase();

@@ -1,29 +1,11 @@
-import React, {useState, useEffect} from 'react'; 
+import React, {useState} from 'react'; 
 import Address from './Address';
 import Modal from 'react-modal'
 import './User.css';
-// const moment = require("moment");
-
-// 24 Hour format
-// console.log(moment().format("MM/DD/YYYY"));
-
-import * as moment from 'moment'
-
-const yourDate = new Date()
-const NewDate = moment(yourDate, 'DD-MM-YYYY')
-
-// const now = new Date();
-// const dateString = now.toLocaleDateString({
-//   weekday: "short",
-//   year: "numeric",
-//   month: "2-digit",
-//   day: "numeric"
-// })
 
 const Users = ({userData}) => {
     const [modalOpen, setMOdalOpen] = useState(false);
     const [imageOpen, setImageOpen] = useState(false);
-
 
     return (
         <div className="user">
@@ -36,7 +18,7 @@ const Users = ({userData}) => {
                         <h4>Full Name : {userData.name.first} {userData.name.last}</h4>
                         <p>Gender : {userData.gender}</p>
                         <p>Email : {userData.email}</p>
-                        <p>Phone : {userData.phone}</p>
+                        <p>Phone : {userData.phone.replace(/-/g, '')}</p>
                     </div>
                     <div>
                         <button onClick={() => setMOdalOpen(false)} >Close</button>
@@ -51,7 +33,7 @@ const Users = ({userData}) => {
                 </div>
                 
                 <Address location={userData.location} />
-                <div className='phone'> <span>Phone : </span> {userData.phone}</div>
+                <div className='phone'> <span>Phone : </span> {userData.phone.replace(/-/g, '')}</div>
                 <a className="user__image" onClick={() => setImageOpen(true)}><img src={userData.picture.thumbnail}/></a>
                 <Modal isOpen={imageOpen}>
                     <div>
